@@ -1,0 +1,66 @@
+<div class="container" ng-hide="details_submitted" pfs-set-fourth-padding-top>
+  <div class="row text-center ">
+    <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 col-lg-10 col-md-10 col-sm-10 col-xs-10">
+      <h3>Your Account Settings</h3>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" ng-hide="details_submitted">
+  <div class="row">
+    <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 col-lg-10 col-md-10 col-sm-10 col-xs-10">
+      <h4>Change Password</h4>
+    </div>
+  </div>
+</div>
+<div class="container" ng-hide="details_submitted">
+  <div class="row">
+    <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 col-lg-10 col-md-10 col-sm-10 col-xs-10">
+      <p class="col-lg-3 col-md-3 col-sm-3 col-xs-7">current password:</p>
+      <input type="password" ng-model="change_password_metadata.current_password" style="margin-bottom:20px;" placeholder="" class="col-lg-3 col-md-3 col-sm-3 col-xs-5">
+    </div>
+  </div>
+</div>
+<div class="container" ng-hide="details_submitted">
+  <div class="row">
+    <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 col-lg-10 col-md-10 col-sm-10 col-xs-10">
+      <p class="col-lg-3 col-md-3 col-sm-3 col-xs-7">new password:</p>
+      <input type="password" ng-model="change_password_metadata.new_password" style="margin-bottom:20px;" placeholder="" class="col-lg-3 col-md-3 col-sm-3 col-xs-5">
+    </div>
+  </div>
+</div>
+<div class="container" ng-hide="details_submitted">
+  <div class="row">
+    <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 col-lg-10 col-md-10 col-sm-10 col-xs-10">
+      <p class="col-lg-3 col-md-3 col-sm-3 col-xs-7">retype new password</p>
+      <input type="password" ng-model="change_password_metadata.retype_new_password" style="margin-bottom:20px;" placeholder="" class="col-lg-3 col-md-3 col-sm-3 col-xs-5">
+    </div>
+  </div>
+</div>
+
+<!-- Status bar -->
+<div class="row">
+	<div class="col-centered col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-2 col-lg-3 col-md-3 col-sm-3 col-xs-8" ng-show="submit_pressed_cp">
+		<uib-progressbar class="progress-striped active" value="dynamic" type="success"><i>Changing your password...</i></uib-progressbar>
+	</div>
+</div>
+
+<!-- Alerts -->
+<div class="row row-centered">
+	
+	<div class="col-centered col-lg-3 col-md-3 col-sm-3 col-xs-8">
+		<uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
+	</div>
+</div>
+
+
+<div class="container" ng-hide="details_submitted">
+  <div class="row">
+    <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 col-lg-10 col-md-10 col-sm-10 col-xs-10">
+      <button ng-click="resetPassword()" class="btn" type="submit">
+        <i class="icon-reply">Submit</i>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="530px" height="586px" viewBox="0 0 530 586" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M36,527.336058 L26.3,135.736058 C26.3,135.736058 126.2,-41.8639424 360.7,9.23605756 C360.7,9.23605756 616.6,63.9360576 482.7,413.036058 L121.6,570.136058 C121.6,570.136058 85.3,594.336058 48.1,553.036058 L30.2,577.136058 L0,577.136058 L36,527.336058 Z M148,527.336058 L446.8,388.636058 C446.8,388.636058 479,289.036058 380.6,324.836058 L160.9,506.136058 C160.9,506.136058 150.7,500.736058 152.4,480.236058 L348.3,317.436058 C348.3,317.436058 358.5,214.036058 266,268.536058 L148.2,462.436058 C148.2,462.436058 130.4,468.736058 124.4,448.136058 L248.2,248.936058 C248.2,248.936058 249.5,146.036058 164.2,209.736058 L104,449.936058 C104,449.936058 90.4,472.236058 77.7,449.036058 L147.3,178.336058 C147.3,178.336058 136.3,74.7360576 56.5,143.536058 L56.5,499.636058 L82.8,464.136058 C82.8,464.136058 91.8,454.436058 101.5,463.236058 C101.6,463.336058 154.5,492.336058 148,527.336058 Z M95.9,489.236058 L67.9,529.636058 L87.2,545.336058 C87.4,545.836058 137.6,553.836058 117.1,506.736058 L95.9,489.236058 Z" id="path-1"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="parachute_logo" transform="translate(-48.000000, -6.000000)">
+            <g id="Layer_2" transform="translate(52.000000, 8.000000)">
+                <g id="Group">
+                    <g id="Combined-Shape">
+                        <g>
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use fill="#CCDAEC" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

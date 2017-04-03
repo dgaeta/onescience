@@ -1,0 +1,56 @@
+<div style="padding-top:50px;">
+
+<!-- Status bar -->
+<div class="row">
+	<div class="col-centered col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-2 col-lg-3 col-md-3 col-sm-3 col-xs-8" ng-show="file_pressed">
+		<uib-progressbar class="progress-striped active" value="dynamic" type="success"><i>Downloading your file...</i></uib-progressbar>
+	</div>
+</div>
+
+<!-- Alerts -->
+<div class="row row-centered">
+	
+	<div class="col-centered col-lg-3 col-md-3 col-sm-3 col-xs-8">
+		<uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
+	</div>
+</div>
+
+
+
+<div ng-repeat="item in children track by $index"> 
+
+	<div ng-click="clickedItem(item)" ng-hide="isSymbolic(item.name)" class="pfs-thumbnail-container col-lg-2 col-md-2 col-sm-2 col-xs-4 text-center">
+		
+		<img ng-src="{{ thumb_images[item.name] || '/images/image_holder.png'}}" class="img-responsive" alt="Responsive image" 
+		style="padding-bottom: 20px; border: none; display: block; margin: 0 auto;">
+
+		<!-- <img ng-show="item.is_dir" src="/images/mac_folder.png" class="img-responsive" alt="Responsive image" 
+		style="padding-bottom: 20px; border: none; display: block; margin: 0 auto;">
+		<img ng-show="item.is_file" src="/images/mac_file.png" class="img-responsive" alt="Responsive image" style="padding-bottom: 20px; border: none; display: block; margin: 0 auto;"> -->
+
+		<h5 ng-click="clickItem(item)">{{item.name}}</h5>
+	</div>
+</div>
+
+
+<!-- <div ng-repeat="item in children track by $index" class="itemDisplay col-lg-2 col-md-2 col-sm-2 col-xs-4 text-center"> 
+
+	<div ng-click="clickedItem(item)" ng-hide="isHidden(item.name)" class="">
+		
+		<img ng-attr-src="{{ thumb_images[item.name] || '/images/image_holder.png'}}" class="" alt="Responsive image" 
+		style="padding-bottom: 20px; border: none; display: block; margin: 0 auto;">
+
+		
+		<h5 ng-click="clickItem(item)">{{item.name}}</h5>
+	</div>
+</div> -->
+
+<div ng-hide="num_children > 0">
+
+	<div class="text-center col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 col-lg-10 col-md-10 col-sm-10 col-xs-10">
+		<div class="row text-center">
+			<h3 class="text-center">This folder is empty</h3>
+		</div>
+	</div>	
+	
+</div>

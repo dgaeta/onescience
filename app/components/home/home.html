@@ -1,0 +1,133 @@
+<div class="splash-background">
+	<div class="splash-nav-links">
+		<div class="pull-right">
+			<h4> 
+				<span class="nav-home"><a  ui-sref="soAbout">About</a></span> 
+				<span class="nav-home"><a href="mailto:team@parachutefs.com">Contact</a></span> 
+				<span class="nav-home"><a  ui-sref="soAuthLogin">Login</a></span>  
+				<span class="nav-home"><a  ng-click="scrollTo('joinBetaForm'); hideForm=false; joinClicked=true;">Join Beta</a></span>
+			</h4>
+		</div>
+	</div>
+
+	<div class="splash-section" pfs-set-height>
+		<div class="container" style="padding-top:80px;">
+			<div class="row-centered">	
+				<h1>The evolution of us.</h1>
+			</div>	
+		</div>
+
+		<div class="container" style="">
+			<div class="row-centered">	
+				<div class="col-lg-offset-2 col-lg-4">
+					<h1 pfs-SetHeightQuarterPage>Join the movement to beat fake news.</h1>
+				</div>
+				<div class="col-lg-4">
+					<img src="/images/OS-screen-shot.png" alt="Logo" class="no-gutter col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				</div>
+			</div>	
+		</div>
+	</div>
+
+</div>
+
+
+<div class="home-middle-section">
+
+	<div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-4 col-md-4 col-sm-4">
+		<div class="container">
+			<div class="row">
+				<p>OneScience is an app designed to beat fake news using crowdsourcing to find the truth from news articles.</p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<p>We're bringing together everyone that believes there is a problem with our current news methods. We see a new future where we all collaborate to decipher the truth from noise.</p>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<p>We won't wait for the next false information disaster to happen, we'll take the charge to change the world, by spreading the scientifc way of thinking.</p>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<p>Inspired by Carl Sagan, Issac Newton, Richard Feynman and every other great thinker in history.</p>
+			</div>
+		</div>
+	</div>	
+
+	<div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-4 col-md-4 col-sm-4">
+		<div class="container">
+			<div class="row">
+				<a href="https://www.facebook.com/parachutefs/?fref=ts"><img src="/images/Facebook_5_.svg" alt="Logo" class="" > Facebook</a>
+				<div
+				  class="fb-like"
+				  style="padding-left:15px;"
+				  data-share="true"
+				  data-width="450"
+				  data-show-faces="true">
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<a href="https://twitter.com/onescienceapp"><img src="/images/Twitter_6_.svg" alt="Logo" class=""> Twitter</a>
+			</div>
+				<a 
+				  class="twitter-follow-button"
+				  data-show-count="false"
+				  href="https://twitter.com/onescienceapp"
+				  data-size="large">
+				Follow @OneScienceApp</a>
+		</div>
+		<div class="container">
+			<div class="row">
+				<a href="https://www.instagram.com/parachutefilesystem/"><img src="/images/Instagram_6_.svg" alt="Logo" class=""> Instagram</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="home-bottom-section" style="padding-top:50px; min-height: 300px;">
+	<div class="text-center">
+		<a href="https://medium.com/@team_29828">Blog</a> \ <a href="mailto:team@parachutefs.com">Contact</a> 
+	</div>
+	<div class="container" >
+		<div class="row row-centered home-bottom-join-section">
+		<button class="btn btn-success " ng-click="hideForm=false; joinClicked=true;" ng-hide="joinClicked">Start 3 months Free Trail</button>
+	    <!-- <div ng-click="hideForm=true">Cancel</div> -->
+        <div id="one" class='animate-hide col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-lg-8 col-md-8 col-sm-8 col-xs-12'  ng-hide="hideForm"> 
+            <input type="search" id="joinBetaForm" ng-model="email" required="true" value="" placeholder="Your email" class="beta-form col-xs-10" ng-selected="!hideForm">
+            <div class="join-beta-button">
+            	<button class="btn btn-success" ng-click="addEmailToSendGrid();" >Submit</button>
+            </div>
+        </div>
+        <h1 ng-show="submitted">Great! We'll be in touch soon.</h1>
+
+
+		</div>
+	</div>
+</div>
+<div class="home-bottom-section home-bottom-info">
+
+	<div class="container" style="padding-top:80px;">
+		<div class="row-centered">		
+			<img src="/images/Oval@2x.png" alt="Logo" class="col-centered col-lg-1 col-md-1 col-sm-1 col-xs-5">	
+		</div>	
+	</div>
+	<div class="container">
+		<div class="row text-center">
+			<h2 style="color:#303030">OneScience</h2>
+		</div>
+	</div>
+	<div class="container" style="padding-bottom:50px;">
+		<div class="row text-center ">
+			<p style="color:#303030">© OneScience, Corp. All rights reserved.</p>
+		</div>
+	</div>
+</div>
+
+

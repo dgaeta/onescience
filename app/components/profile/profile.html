@@ -1,0 +1,44 @@
+<div style="padding-top:30px;">
+
+<!-- NAVIGATION -->
+ <div class="container" ng-show="tokenExists()">
+  <nav class="navbar navbar-semi-transparent navbar-highlight-aquamarine navbar-fixed-top sticky" role="navigation">
+
+    <div  ng-controller="soCtrl">
+      <div class="navbar-header">
+          <button type="button" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed" 
+            class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" ui-sref="soHome">
+            <p class="regular-font">PARACHUTE</p>
+          </a>
+      </div>
+
+ 
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div collapse="navCollapsed" class="collapse nav-collapse navbar-collapse navbar-responsive-collapse " 
+        ng-class="{'in': !navCollapsed}" id="bs-example-navbar-collapse-1" ng-click="navCollapsed=true">
+        <ul class="nav navbar-nav pull-right">
+          <li><a  ui-sref="profile.devices" ng-show="tokenExists()">DEVICES</a></li>
+          <li><a  ui-sref="soAuthLogin" ng-hide="tokenExists()">LOGIN</a></li>
+          <li><a  ui-sref="soAbout">ABOUT</a></li>
+          <li><a  ui-sref="soAuthRegistration" ng-hide="tokenExists()">GET AN INVITE</a></li>
+          <li><a  ui-sref="profile.user_settings" ng-show="tokenExists()">SETTINGS</a></li>
+          <li>
+            <button type="button" class="btn btn-primary btn-sm outline" ng-show="tokenExists()" ng-click="logout()" style="margin-top:10px; margin-right:30px; margin-left:15px;">
+            <p style="margin-bottom:0px;">Log Out</p>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </nav> 
+</div>
+
+
+<div ui-view></div>

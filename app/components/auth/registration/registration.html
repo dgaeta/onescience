@@ -1,0 +1,114 @@
+<div style="padding-bottom:100px; background-color:#282A36;" pfs-set-height>
+  <div class="container" ng-hide="details_submitted" style="color:#59CEEC;">
+    <div class="row text-center ">
+      <div class="hidden-xs col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-10 col-md-10 col-sm-10" pfs-set-eigth-padding-top>
+        <h1 class="raleway">Hi! Parachute is availible to exclusive users right now.</h1>
+      </div>
+      <div class="hidden-lg hidden-md hidden-sm col-xs-offset-1 col-xs-10" pfs-set-eigth-padding-top>
+        <h1 class="raleway" style="font-size:30px;">Hi! Parachute is availible to exclusive users right now.</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" ng-hide="details_submitted" style="padding-bottom: 20px; color: white;">
+    <div class="row">
+      <div class="text-center hidden-xs col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-10 col-md-10 col-sm-10 ">
+        <h3 class="open-sans">If you'd like to join our exclusive user base just introduce yourself!</h3>
+      </div>
+      <div class="text-center hidden-lg hidden-md hidden-sm col-xs-offset-1 col-xs-10">
+        <h3 class="open-sans" style="font-size:16px;">If you'd like to join our exclusive user base just introduce yourself!</h3>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container" ng-hide="details_submitted">
+    <div class="row">
+      <div class="text-center col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 col-lg-10 col-md-10 col-sm-10 col-xs-10">
+        <p>Hey! My name is</p>
+        <input type="text" ng-model="user_details.name" placeholder="your name">
+      </div>
+    </div>
+  </div>
+
+ <!--  <div class="container" ng-hide="details_submitted" style="padding-top: 20px;">
+    <div class="row">
+      <div class="text-center col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 col-lg-10 col-md-10 col-sm-10 col-xs-10">
+        <p>I'm currently living in</p>
+        <input type="text" ng-model="user_details.city" placeholder="city">,<input type="text" ng-model="user_details.state" placeholder="state">
+      </div>
+    </div>
+  </div> -->
+
+  <!-- <div class="container" ng-hide="details_submitted" style="padding-top: 20px;">
+    <div class="row">
+      <div class="text-center col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 col-lg-10 col-md-10 col-sm-10 col-xs-10">
+        <p>I (work) OR (attend school) at</p>
+        <input type="text" ng-model="user_details.organization" placeholder="school or company">
+      </div>
+    </div>
+  </div> -->
+
+  <div class="container" ng-hide="details_submitted" style="padding-top: 20px;">
+    <div class="row">
+      <div class="text-center col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 col-lg-10 col-md-10 col-sm-10 col-xs-10">
+        <p>My email is</p>
+        <input type="text" ng-model="user_details.email" placeholder="email" style="margin-bottom:20px;">
+      </div>
+    </div>
+  </div>
+
+  <div class="container" ng-hide="details_submitted" style="padding-top: 20px;">
+    <div class="row">
+      <div class="text-center col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 col-lg-10 col-md-10 col-sm-10 col-xs-10">
+        <p>And lastly, I can't wait to use Parachute because</p>
+        <textarea type="text" cols="36" rows="5" ng-model="user_details.interested_in" placeholder="Feel free to say as little or much as you'd like!"> </textarea>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- PROGRESS BAR -->
+  <div class="row row-centered" ng-show="finish_pressed && !details_submitted">
+    <div class="col-centered col-lg-3 col-md-3 col-sm-3 col-xs-8">
+      <uib-progressbar class="progress-striped active" value="dynamic" type="success"><i>Registering you...</i></uib-progressbar>
+    </div>
+  </div>
+
+   <!-- ALERTS AREA -->
+    <div class="container" ng-hide="details_submitted">
+      <div class="row">
+        <div class="col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-2 col-lg-4 col-md-4 col-sm-4 col-xs-8">
+          <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
+        </div>
+      </div>
+    </div>
+
+  <div class="container" ng-hide="details_submitted">
+    <div class="row">
+      <div class="text-center col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 col-lg-10 col-md-10 col-sm-10 col-xs-10">
+        <button ng-click="finish_pressed=true;submit()" class="btn" type="submit" style="background-color:#4391FF; color:white;">
+          <i class="icon-reply">Finish</i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Only Shown on complete -->
+  <div class="raleway container" ng-show="details_submitted" pfs-set-fourth-padding-top>
+    <div class="row text-center ">
+      <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 col-lg-10 col-md-10 col-sm-10 col-xs-10">
+        <h1 style="color: #59CEEC;">Great! We'll be in touch soon!</h1>
+      </div>
+    </div>
+  </div>
+  <div class="container" ng-show="details_submitted">
+    <div class="row text-center ">
+      <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 col-lg-10 col-md-10 col-sm-10 col-xs-10">
+        <h1 class="open-sans" style="font-size:24px;">Keep an eye on your email inbox or contact us at team@parachutefs.com if you have any questions!</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
